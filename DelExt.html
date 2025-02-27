@@ -327,7 +327,7 @@
         <div class="option" data-name="about-tab">About</div>
         <div style="border-bottom: 1px solid #444; margin-bottom: 10px; padding-bottom: 10px; width: 100%;"></div>
         <p style="text-align: center; margin-left: -10px; user-select: none;">Made by <a href="https://github.com/WebCheats/" target="_blank">WebCheats</a></p>
-        <p style="text-align: center; margin-left: 50px; position: absolute; bottom: 10px; color: rgb(78, 78, 78);">Version 1.0.1</p>
+        <p style="text-align: center; margin-left: 50px; position: absolute; bottom: 10px; color: rgb(78, 78, 78);">Version 1.0.2</p>
     </div>
     <div class="main-content">
         <div id="printer-tab">
@@ -372,7 +372,7 @@
 
         async function checkForUpdates() {
             const versionUrl = "https://raw.githubusercontent.com/WebCheats/DelExt/refs/heads/main/version";
-            const updNumList = ["1.0.0", "1.0.1"];
+            const updNumList = ["1.0.0", "1.0.1", "1.0.2"];
 
             try {
             const response = await fetch(versionUrl);
@@ -921,6 +921,7 @@
             instructions.innerHTML = settingsUrl;
             instructions.style.padding = "15px";
             instructions.style.textAlign = "center";
+            instructions.style.userSelect = "auto";
             
             const embed = document.createElement("iframe");
             embed.width = "400";
